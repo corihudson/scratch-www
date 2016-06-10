@@ -1,6 +1,28 @@
 @import "../../colors";
 
 .thumbnail {
+
+    &:hover {
+        .remove {
+            opacity: 1;
+            cursor: pointer;
+        }
+    }
+
+    .remove {
+        position: absolute;
+        top: 0;
+        right: 0;
+        opacity: 0;
+        border: 2px solid $ui-border;
+        border-radius: 300px;
+        box-shadow: 0 1px 2px $box-shadow-gray;
+        background-color: $ui-light-gray;
+        padding: 2px 6px;
+        line-height: 16px;
+        font-size: 16px;
+    }
+
     .thumbnail-image {
         display: block;
 
@@ -104,6 +126,30 @@
         img {
             width: $gallery-width;
             height: $gallery-height;
+        }
+    }
+
+    &.curator {
+        $user-width: 180px;
+        $user-height: 60px;
+        margin: 15px 10px 0 0;
+        border: 1px solid $ui-gray;
+        background-color: $ui-light-gray;
+        padding: 10px 15px;
+        width: $user-width;
+
+        img {
+            width: $user-height;
+            height: $user-height;
+        }
+
+        .thumbnail-image {
+            width: $user-height;
+        }
+
+        .remove {
+            top: -6px;
+            right: -8px;
         }
     }
 }

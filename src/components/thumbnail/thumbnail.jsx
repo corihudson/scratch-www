@@ -89,6 +89,7 @@ var Thumbnail = React.createClass({
 
         return (
             <div className={classes} >
+                {(this.props.context == 'studio') ? <span className="remove">x</span> : null}
                 {imgElement}
                 <div className="thumbnail-title">
                     {titleElement}

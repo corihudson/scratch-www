@@ -6,32 +6,6 @@
     justify-content: space-around;
     align-items: center;
 
-    .thumbnail {
-        padding: 12px;
-
-        &.project {
-            $project-width: 200px;
-            $project-height: 150px;
-            width: $project-width;
-
-            img {
-                width: $project-width;
-                height: $project-height;
-            }
-        }
-
-        &.gallery {
-            $gallery-width: 200px;
-            $gallery-height: 118px;
-            width: $gallery-width;
-
-            img {
-                width: $gallery-width;
-                height: $gallery-height;
-            }
-        }
-    }
-
     &.column {
         flex-direction: column;
         justify-content: center;
