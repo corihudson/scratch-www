@@ -54,6 +54,15 @@ $base-bg: $ui-white;
 
     .thumbnail {
         padding: 12px;
+
+        &.project {
+            width: 200px;
+
+            img {
+                width: 200px;
+                height: 150px;
+            }
+        }
     }
 
     .load button {
