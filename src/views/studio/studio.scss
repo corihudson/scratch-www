@@ -1,0 +1,129 @@
+@import "../../colors";
+@import "../../frameless";
+
+$base-bg: $ui-white;
+$splash-red: #ef4836;
+
+#view {
+    padding: 0;
+
+    .success {
+        background-color: $splash-green;
+    }
+
+    .error {
+        background-color: $splash-red;
+    }
+
+    .outer {
+        margin-right: auto;
+        margin-bottom: 20px;
+        margin-left: auto;
+        width: 100%;
+    }
+
+    .box {
+        background-color: $ui-gray;
+        width: 100%;
+
+        .box-content {
+            padding: 0;
+        }
+
+        h1 {
+            margin: 5px;
+            padding-left: 20px;
+        }
+    }
+
+    .description {
+        clear: both;
+        background-color: darken($ui-blue, 10);
+        width: 100%;
+        height: 20em;
+
+        #clear {
+            clear: both;
+        }
+
+        h1 {
+            margin-left: 12px;
+            padding-top: 12px;
+            color: $type-white;
+        }
+
+        textarea {
+            display: block;
+            float: left;
+            margin: auto;
+            margin-top: 12px;
+            border: 2px solid transparent;
+            background-color: inherit;
+            width: 100%;
+            max-width: 600px;
+            height: 288px;
+            line-height: 1.5385em;
+            color: $type-white;
+            font-size: 13px;
+            resize: none;
+
+            &:hover {
+                border: 2px dashed $active-gray;
+            }
+
+            &:focus {
+                outline: none;
+                border: 2px dashed $active-gray;
+                background-color: $active-gray;
+                cursor: text;
+            }
+        }
+
+        .studio-info {
+            float: left;
+        }
+    }
+
+    #projectBox {
+        border-top: 2px solid;
+        border-bottom-right-radius: 8px;
+        border-color: $active-gray;
+        background-color: $ui-white;
+        padding-bottom: 30px;
+        width: 100%;
+    }
+
+    .thumbnail {
+        position: relative;
+        padding: 12px;
+        white-space: nowrap;
+
+        &.gallery {
+            margin: auto;
+
+            img {
+                height: 130px;
+            }
+        }
+
+        &.project {
+            width: 240px;
+
+            img {
+                width: 240px;
+                height: 180px;
+            }
+        }
+    }
+
+    .load button {
+        outline: None;
+        border: None;
+        background-color: $ui-white;
+        padding: 0;
+
+        li {
+            color: $header-gray;
+        }
+    }
+}
