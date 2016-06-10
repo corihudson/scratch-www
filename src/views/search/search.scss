@@ -13,7 +13,11 @@ $base-bg: $ui-white;
         .box-content {
             padding: 0;
         }
-    }   
+    }
+
+    .thumbnail {
+        padding: 12px;
+    }
 
     #projectBox {
         border-top: 2px solid;

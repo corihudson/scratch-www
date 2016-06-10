@@ -10,6 +10,7 @@ var Box = require('../../components/box/box.jsx');
 var SubNavigation = require('../../components/subnavigation/subnavigation.jsx');
 var Tabs = require('../../components/tabs/tabs.jsx');
 var Grid = require('../../components/grid/grid.jsx');
+var Thumbnail = require('../../components/thumbnail/thumbnail.jsx');
 
 require('./search.scss');
 
@@ -91,7 +92,7 @@ var Search = injectIntl(React.createClass({
     },
     render: function () {
         var formatMessage = this.props.intl.formatMessage;
-        
+
         return (
             <div>
                 <div className='outer'>
@@ -103,11 +104,40 @@ var Search = injectIntl(React.createClass({
                             {this.getTab('studios')}
                         </Tabs>
                         <div id='projectBox' key='projectBox'>
-                            <Grid items={this.state.loaded}
-                                  itemType={this.props.tab}
-                                  showLoves={true}
-                                  showFavorites={true}
-                                  showViews={true} />
+                            <Grid type={this.props.itemType}>
+                                  {this.state.loaded.map(function (item) {
+                                      var href = '/' + this.props.tab + '/' + item.id + '/';
+
+                                      if (this.props.tab == 'projects') {
+                                          return (
+                                            <Thumbnail key={item.id}
+                                                       showLoves={true}
+                                                       showFavorites={true}
+                                                       showRemixes={true}
+                                                       showViews={true}
+                                                       type={'project'}
+                                                       href={href}
+                                                       title={item.title}
+                                                       src={item.image}
+                                                       creator={item.creator}
+                                                       loves={item.stats.loves}
+                                                       favorites={item.stats.favorites}
+                                                       remixes={item.stats.remixes}
+                                                       views={item.stats.views}  />
+                                        );
+                                      }
+                                    else {
+                                          return (
+                                            <Thumbnail key={item.id}
+                                                       type={'gallery'}
+                                                       href={href}
+                                                       title={item.title}
+                                                       src={item.image}
+                                                       owner={item.owner}  />
+                                        );
+                                      }
+                                  }.bind(this))}
+                            </Grid>
                             <SubNavigation className='load'>
                                 <button onClick={this.getSearchMore}>
                                     <li>
