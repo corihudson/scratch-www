@@ -8,6 +8,7 @@ var StudioContainer = require('./components/studiocontainer.jsx');
 
 var Page = require('../../components/page/www/page.jsx');
 var Tabs = require('../../components/tabs/tabs.jsx');
+var Button = require('../../components/forms/button.jsx');
 var Thumbnail = require('../../components/thumbnail/thumbnail.jsx');
 
 // var DropdownBanner = require('../../components/dropdown-banner/banner.jsx');
@@ -24,16 +25,16 @@ var Studio = injectIntl(React.createClass({
         var typeOptions = ['projects','curators','comments','activity'];
 
         var pathname = window.location.pathname.toLowerCase();
-        if (pathname.substring(pathname.length-1,pathname.length) == '/') {
-            pathname = pathname.substring(0,pathname.length-1);
+        if (pathname.substring(pathname.length - 1, pathname.length) === '/') {
+            pathname = pathname.substring(0, pathname.length-1);
         }
         var slash = pathname.lastIndexOf('/');
-        var type = pathname.substring(slash+1,pathname.length);
+        var type = pathname.substring(slash + 1, pathname.length);
         // type = (type == 'curators') ? 'users' : type;
         var typeStart = pathname.indexOf('studios/');
-        var id = pathname.substring(typeStart+8,slash);
-        if (typeOptions.indexOf(type) == -1) {
-            id = pathname.substring(typeStart+8);
+        var id = pathname.substring(typeStart + 8,slash);
+        if (typeOptions.indexOf(type) === -1) {
+            id = pathname.substring(typeStart + 8);
             window.location = window.location.origin + '/studios/' + id + '/projects';
         }
 
@@ -119,7 +120,7 @@ var Studio = injectIntl(React.createClass({
                     </a>;
         if (this.props.itemType==type) {
             allTab = <a href={'/studios/' + this.props.studioId + '/' + type + '/'}>
-                        <li className='active'>
+                        <li className='active' name={type}>
                             <FormattedMessage
                                 id={'explore.' + type}
                                 defaultMessage={type.charAt(0).toUpperCase() + type.slice(1)} />
@@ -133,23 +134,33 @@ var Studio = injectIntl(React.createClass({
             <div>
                 <div className='outer'>
                     <div className="description">
-                        <div className="studio-info">
+                        <div className="inner">
                             <h1 id='studio-title'>{this.state.title}</h1>
-                            <Thumbnail key='studioThumbnail'
-                                       type='gallery'
-                                       src={'//cdn2.scratch.mit.edu/get_image/gallery/' +
-                                            this.props.studioId + '_200x130.png'}
-                                       title=''/>
+                            <div className="info">
+                                <div className="left">
+                                    <Thumbnail key='studioThumbnail'
+                                               type='gallery'
+                                               src={'//cdn2.scratch.mit.edu/get_image/gallery/' +
+                                                    this.props.studioId + '_200x130.png'}
+                                               title=''/>
+                                    <Button>Follow Studio</Button>
+                                </div>
+                                <div className="right">
+                                    <textarea></textarea>
+                                    <a href="#" id="report">Report this Studio</a>
+                                </div>
+                            </div>
                         </div>
-                        <textarea></textarea>
                     </div>
                     <div className='box'>
-                        <Tabs>
-                            {this.getTab('projects')}
-                            {this.getTab('comments')}
-                            {this.getTab('curators')}
-                            {this.getTab('activity')}
-                        </Tabs>
+                        <div className="tab-background">
+                            <Tabs>
+                                {this.getTab('projects')}
+                                {this.getTab('comments')}
+                                {this.getTab('curators')}
+                                {this.getTab('activity')}
+                            </Tabs>
+                        </div>
                         <div id='projectBox' key='projectBox'>
                             <StudioContainer id={this.props.studioId} type={this.props.itemType}/>
                         </div>

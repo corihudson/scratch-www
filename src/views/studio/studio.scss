@@ -17,7 +17,6 @@ $splash-red: #ef4836;
 
     .outer {
         margin-right: auto;
-        margin-bottom: 20px;
         margin-left: auto;
         width: 100%;
     }
@@ -38,64 +37,139 @@ $splash-red: #ef4836;
 
     .description {
         clear: both;
-        background-color: darken($ui-blue, 10);
+        background-color: $ui-blue;
         width: 100%;
-        height: 20em;
+        height: $cols5;
 
-        #clear {
-            clear: both;
-        }
+        .inner {
+            width: $cols12;
 
-        h1 {
-            margin-left: 12px;
-            padding-top: 12px;
-            color: $type-white;
-        }
-
-        textarea {
-            display: block;
-            float: left;
-            margin: auto;
-            margin-top: 12px;
-            border: 2px solid transparent;
-            background-color: inherit;
-            width: 100%;
-            max-width: 600px;
-            height: 288px;
-            line-height: 1.5385em;
-            color: $type-white;
-            font-size: 13px;
-            resize: none;
-
-            &:hover {
-                border: 2px dashed $active-gray;
+            h1 {
+                padding: .5em 0;
+                color: $type-white;
             }
 
-            &:focus {
-                outline: none;
-                border: 2px dashed $active-gray;
-                background-color: $active-gray;
-                cursor: text;
+            .info {
+                .left {
+                    display: inline;
+                    float: left;
+                }
+
+                button {
+                    background-color: $ui-white;
+                    width: 13.75rem;
+                    color: $ui-blue;
+                }
+
+                .thumbnail.gallery {
+                    width: auto;
+
+                    .thumbnail-image {
+                        display: inline;
+
+                        img {
+                            border: 2px solid $ui-white;
+                            border-radius: 10px;
+                            width: $cols3;
+                        }
+                    }
+                }
+
+                .right {
+                    display: inline;
+                    float: right;
+                }
+
+                textarea {
+                    display: block;
+                    border: 0;
+                    border-radius: 10px;
+                    box-shadow: .5px 0 1px $box-shadow-gray;
+                    width: $cols8;
+                    height: $cols3;
+                    line-height: 1.5385em;
+                    color: $type-gray;
+                    resize: none;
+
+                    &:focus {
+                        outline: none;
+                    }
+                }
+
+                #report {
+                    display: block;
+                    float: right;
+                    border-bottom: 1px solid $ui-white;
+                    color: $type-white;
+                    font-size: 12px;
+                    font-weight: 200;
+                }
             }
         }
+    }
 
-        .studio-info {
-            float: left;
+    .tab-background {
+        box-shadow: 1px 0 1px $box-shadow-gray;
+        background-color: $ui-white;
+        width: 100%;
+    }
+
+    .tabs {
+        background-color: $ui-white;
+        padding: 0;
+        width: 58.75rem;
+
+        li {
+            margin: 0;
+            border: 0;
+            border-radius: 0;
+            width: $cols2;
+            text-align: center;
+
+            &.active {
+                &[name="projects"] {
+                    border-bottom: 3px solid $ui-aqua;
+                }
+
+                &[name="comments"] {
+                    border-bottom: 3px solid $ui-purple;
+                }
+
+                &[name="curators"] {
+                    border-bottom: 3px solid $ui-blue;
+                }
+
+                &[name="activity"] {
+                    border-bottom: 3px solid $ui-orange;
+                }
+            }
+
+            &:active {
+                box-shadow: none;
+                padding: .75em 1.5em;
+            }
         }
     }
 
     #projectBox {
-        border-top: 2px solid;
+        margin: auto;
         border-bottom-right-radius: 8px;
         border-color: $active-gray;
-        background-color: $ui-white;
+        padding-top: $gutter;
         padding-bottom: 30px;
-        width: 100%;
+        width: $cols12;
+
+        .grid {
+            padding: 12px 0 0 0;
+
+            .projects {
+                justify-content: space-between;
+            }
+        }
     }
 
     .thumbnail {
         position: relative;
-        padding: 12px;
         white-space: nowrap;
 
         &.gallery {
@@ -107,11 +181,29 @@ $splash-red: #ef4836;
         }
 
         &.project {
-            width: 240px;
+            margin-bottom: $gutter;
+            border-radius: 10px;
+            box-shadow: 0 1px 2px $box-shadow-gray;
+            background-color: $ui-white;
+            width: $cols3;
 
-            img {
-                width: 240px;
-                height: 180px;
+            .thumbnail-image {
+                border-radius: 10px 10px 0 0;
+
+                img {
+                    border: 0;
+                    border-radius: inherit;
+                    width: $cols3;
+                    height: $cols9 / 4;
+                }
+            }
+
+            .thumbnail-title {
+                padding: 5px 5px 0 5px;
+            }
+
+            .thumbnail-creator {
+                padding: 5px;
             }
         }
     }
