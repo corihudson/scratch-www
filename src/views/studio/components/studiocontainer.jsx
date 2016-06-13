@@ -14,6 +14,7 @@ var StudioContainer = React.createClass({
     ],
     getInitialState: function () {
         return {
+            status: 'NOT_FETCHED',
             loaded: [],
             offset: 1
         };

@@ -140,5 +140,11 @@
         "pattern": "^/terms_of_use/?$",
         "view": "terms/terms",
         "title": "Scratch Terms of Use"
+    },
+    {
+        "name": "studio",
+        "pattern": "^/studios/:id/:tab?/?$",
+        "view": "studio/studio",
+        "title": "Studio"
     }
 ]
