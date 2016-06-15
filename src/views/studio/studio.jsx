@@ -144,6 +144,7 @@ var Studio = injectIntl(React.createClass({
                                                     this.props.studioId + '_200x130.png'}
                                                title=''/>
                                     <Button>Follow Studio</Button>
+                                    <p>xx Followers</p>
                                 </div>
                                 <div className="right">
                                     <textarea></textarea>

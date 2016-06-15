@@ -71,6 +71,7 @@ $splash-red: #ef4836;
                             border: 2px solid $ui-white;
                             border-radius: 10px;
                             width: $cols3;
+                            box-sizing: border-box;
                         }
                     }
                 }
@@ -85,10 +86,12 @@ $splash-red: #ef4836;
                     border: 0;
                     border-radius: 10px;
                     box-shadow: .5px 0 1px $box-shadow-gray;
+                    padding: 12px;
                     width: $cols8;
                     height: $cols3;
                     line-height: 1.5385em;
                     color: $type-gray;
+                    box-sizing: border-box;
                     resize: none;
 
                     &:focus {
@@ -164,7 +167,7 @@ $splash-red: #ef4836;
             padding: 12px 0 0 0;
 
             .projects {
-                justify-content: space-between;
+                justify-content: flex-start;
             }
         }
     }
@@ -182,11 +185,16 @@ $splash-red: #ef4836;
         }
 
         &.project {
+            margin-right: $gutter;
             margin-bottom: $gutter;
             border-radius: 10px;
             box-shadow: 0 1px 2px $box-shadow-gray;
             background-color: $ui-white;
             width: $cols3;
+
+            &:nth-child(4n) {
+                margin-right: 0;
+            }
 
             .thumbnail-image {
                 border-radius: 10px 10px 0 0;
