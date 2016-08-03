@@ -1,11 +1,11 @@
+@import "../../colors";
+@import "../../frameless";
+
 #view {
     padding: 0;
 }
 
 .information-page {
-    @import "../../colors";
-    @import "../../frameless";
-
     $ui-secondary: darken($ui-blue, 10%);
 
     .title-banner {
@@ -94,6 +94,97 @@
                     height: 50px;
                 }
 
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: $tablet) {
+    .information-page {
+        p {
+            a {
+                white-space: normal;
+            }
+        }
+
+        .title-banner {
+            &.masthead {
+                h1 {
+                    text-align: center;
+                }
+            }
+        }
+
+        .info-outer {
+            nav {
+                float: none;
+                margin: 0 auto;
+                border: 0;
+                width: initial;
+
+                ol {
+                    padding-left: 0;
+                }
+            }
+
+            .info-inner {
+                float: none;
+
+                p {
+                    text-align: center;
+                }
+
+                dl {
+                    dd {
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: $mobile) {
+    .information-page {
+        .info-outer {
+            nav {
+                width: $cols4;
+            }
+        }
+
+        .info-outer {
+            .info-inner {
+                width: $cols4;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: $mobile) and (max-width: $tablet) {
+    .information-page {
+        .info-outer {
+            nav {
+                width: $cols6;
+            }
+        }
+
+        .info-outer {
+            .info-inner {
+                width: $cols6;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: $desktop) {
+    .information-page {
+        .info-outer {
+            .info-inner {
+                dl {
+                    dt {
+                        text-align: left;
+                    }
+                }
             }
         }
     }

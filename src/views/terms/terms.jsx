@@ -9,6 +9,12 @@ var Terms = React.createClass({
     render: function () {
         return (
             <InformationPage title={'Scratch Terms of Use'}>
+                <nav>
+                    <ol>
+                        <li><a href="#appendix-a">Scratch Day Terms</a></li>
+                        <li><a href="#appendix-b">ScratchX Terms</a></li>
+                    </ol>
+                </nav>
                 <div className="inner info-inner">
                     <section id="user-agreement">
                         <span className="nav-spacer"></span>
@@ -561,12 +567,6 @@ var Terms = React.createClass({
                     </section>
                     <p><b>The Scratch Terms of Use was last updated: April 2016</b></p>
                 </div>
-                <nav>
-                    <ol>
-                        <li><a href="#appendix-a">Scratch Day Terms</a></li>
-                        <li><a href="#appendix-b">ScratchX Terms</a></li>
-                    </ol>
-                </nav>
             </InformationPage>
         );
     }

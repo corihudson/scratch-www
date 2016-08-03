@@ -13,6 +13,20 @@ var Faq = injectIntl(React.createClass({
         var formatMessage = this.props.intl.formatMessage;
         return (
             <InformationPage title={formatMessage({id: 'faq.title'})}>
+                <nav>
+                    <ol>
+                        <li><a href="#about-scratch"><FormattedMessage id='faq.aboutTitle' /></a></li>
+                        <li><a href="#privacy"><FormattedMessage id='faq.privacyTitle' /></a></li>
+                        <li><a href="#remix"><FormattedMessage id='faq.remixTitle' /></a></li>
+                        <li><a href="#accounts"><FormattedMessage id='faq.accountsTitle' /></a></li>
+                        <li><a href="#permissions"><FormattedMessage id='faq.permissionsTitle' /></a></li>
+                        <li><a href="#inappropriate-content">
+                            <FormattedMessage id='faq.inappropriateContentTitle' />
+                        </a></li>
+                        <li><a href="#clouddata"><FormattedMessage id='faq.cloudDataTitle' /></a></li>
+                        <li><a href="#schools"><FormattedMessage id='faq.schoolsTitle' /></a></li>
+                    </ol>
+                </nav>
                 <div className="inner info-inner">
                     <section id="about-scratch">
                         <span className="nav-spacer"></span>
@@ -199,20 +213,6 @@ var Faq = injectIntl(React.createClass({
                         <i><FormattedHTMLMessage id='faq.schoolsMoreInfo' /></i>
                     </section>
                 </div>
-                <nav>
-                    <ol>
-                        <li><a href="#about-scratch"><FormattedMessage id='faq.aboutTitle' /></a></li>
-                        <li><a href="#privacy"><FormattedMessage id='faq.privacyTitle' /></a></li>
-                        <li><a href="#remix"><FormattedMessage id='faq.remixTitle' /></a></li>
-                        <li><a href="#accounts"><FormattedMessage id='faq.accountsTitle' /></a></li>
-                        <li><a href="#permissions"><FormattedMessage id='faq.permissionsTitle' /></a></li>
-                        <li><a href="#inappropriate-content">
-                            <FormattedMessage id='faq.inappropriateContentTitle' />
-                        </a></li>
-                        <li><a href="#clouddata"><FormattedMessage id='faq.cloudDataTitle' /></a></li>
-                        <li><a href="#schools"><FormattedMessage id='faq.schoolsTitle' /></a></li>
-                    </ol>
-                </nav>
             </InformationPage>
         );
     }

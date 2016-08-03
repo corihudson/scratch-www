@@ -10,19 +10,22 @@
         "name": "about",
         "pattern": "^/about/?$",
         "view": "about/about",
-        "title": "About"
+        "title": "About",
+        "viewportWidth": "device-width"
     },
     {
         "name": "developers",
         "pattern": "^/developers/?$",
         "view": "developers/developers",
-        "title": "Developers"
+        "title": "Developers",
+        "viewportWidth": "device-width"
     },
     {
         "name": "hoc",
         "pattern": "^/hoc/?$",
         "view": "hoc/hoc",
-        "title": "Hour of Code"
+        "title": "Hour of Code",
+        "viewportWidth": "device-width"
     },
     {
         "name": "explore",
@@ -66,25 +69,29 @@
         "name": "faq",
         "pattern": "^/info/faq/?$",
         "view": "faq/faq",
-        "title": "FAQ"
+        "title": "FAQ",
+        "viewportWidth": "device-width"
     },
     {
         "name": "educator-landing",
         "pattern": "^/educators/?$",
         "view": "teachers/landing/landing",
-        "title": "Educators"
+        "title": "Educators",
+        "viewportWidth": "device-width"
     },
     {
         "name": "teacher-faq",
         "pattern": "^/educators/faq/?$",
         "view": "teachers/faq/faq",
-        "title": "Teacher Accounts FAQ"
+        "title": "Teacher Accounts FAQ",
+        "viewportWidth": "device-width"
     },
     {
         "name": "cards",
         "pattern": "^/info/cards/?$",
         "view": "cards/cards",
-        "title": "Cards"
+        "title": "Cards",
+        "viewportWidth": "device-width"
     },
     {
         "name": "communityblocks-interviews",
@@ -96,7 +103,8 @@
         "name": "jobs",
         "pattern": "^/jobs/?$",
         "view": "jobs/jobs",
-        "title": "Jobs"
+        "title": "Jobs",
+        "viewportWidth": "device-width"
     },
     {
         "name": "teacherregistration",
@@ -109,7 +117,8 @@
         "name": "teacherwaitingroom",
         "pattern": "^/educators/waiting",
         "view": "teacherwaitingroom/teacherwaitingroom",
-        "title": "Thank you for requesting a Scratch Teacher Account"
+        "title": "Thank you for requesting a Scratch Teacher Account",
+        "viewportWidth": "device-width"
     },
     {
         "name": "wedo2",
@@ -166,24 +175,28 @@
         "name": "dmca",
         "pattern": "^/DMCA/?$",
         "view": "dmca/dmca",
-        "title": "DMCA"
+        "title": "DMCA",
+        "viewportWidth": "device-width"
     },
     {
         "name": "guidelines",
         "pattern": "^/community_guidelines/?$",
         "view": "guidelines/guidelines",
-        "title": "Scratch Community Guidelines"
+        "title": "Scratch Community Guidelines",
+        "viewportWidth": "device-width"
     },
     {
         "name": "privacypolicy",
         "pattern": "^/privacy_policy/?$",
         "view": "privacypolicy/privacypolicy",
-        "title": "Privacy Policy"
+        "title": "Privacy Policy",
+        "viewportWidth": "device-width"
     },
     {
         "name": "terms",
         "pattern": "^/terms_of_use/?$",
         "view": "terms/terms",
-        "title": "Scratch Terms of Use"
+        "title": "Scratch Terms of Use",
+        "viewportWidth": "device-width"
     }
 ]

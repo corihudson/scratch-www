@@ -9,6 +9,15 @@ var Privacypolicy = React.createClass({
     render: function () {
         return (
             <InformationPage title={'Privacy Policy'}>
+                <nav>
+                    <ol>
+                        <li><a href="#collection">What information does the Scratch Team collect about me?</a></li>
+                        <li><a href="#usage">How does the Scratch Team use my information?</a></li>
+                        <li><a href="#update">How can I update my personal information?</a></li>
+                        <li><a href="#protection">How does the Scratch Team protect my information?</a></li>
+                        <li><a href="#changes">Notifications of Changes to the Privacy Policy</a></li>
+                    </ol>
+                </nav>
                 <div className="inner info-inner">
                     <section>
                         <p className="intro">
@@ -204,15 +213,6 @@ var Privacypolicy = React.createClass({
                         </p>
                     </section>
                 </div>
-                <nav>
-                    <ol>
-                        <li><a href="#collection">What information does the Scratch Team collect about me?</a></li>
-                        <li><a href="#usage">How does the Scratch Team use my information?</a></li>
-                        <li><a href="#update">How can I update my personal information?</a></li>
-                        <li><a href="#protection">How does the Scratch Team protect my information?</a></li>
-                        <li><a href="#changes">Notifications of Changes to the Privacy Policy</a></li>
-                    </ol>
-                </nav>
             </InformationPage>
         );
     }
